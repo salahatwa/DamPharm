@@ -1,0 +1,227 @@
+/* You can add global styles to this file, and also import other style files */
+html, body{
+  height:100%;
+  background-color: #F0F0F0;
+}
+
+.ng-dirty.ng-invalid:not(form)  {
+  border: 1px solid #ff6a6a;
+}
+storaji-autocomplete, .uk-autocomplete {
+  display: inline-block;
+  width: 100%;
+}
+
+storaji-autocomplete .ui-autocomplete-panel .ui-autocomplete-list {
+    padding: 0;
+}
+
+storaji-autocomplete .ui-autocomplete-list-item.ui-corner-all {
+    border-radius: 0;
+}
+
+storaji-autocomplete .ui-autocomplete-list-item.ui-state-highlight {
+    background-color: #39f;
+}
+.uk-icon {
+  top: -0.075rem;
+  position: relative;
+}
+/**
+ * Create the loop delay with
+ * the extra keyframes
+ */
+@-webkit-keyframes moveup {
+  0%, 60%, 100% {
+    -webkit-transform: rotateX(50deg) rotateY(0deg) rotateZ(45deg) translateZ(0);
+            transform: rotateX(50deg) rotateY(0deg) rotateZ(45deg) translateZ(0);
+  }
+  25% {
+    -webkit-transform: rotateX(50deg) rotateY(0deg) rotateZ(45deg) translateZ(1em);
+            transform: rotateX(50deg) rotateY(0deg) rotateZ(45deg) translateZ(1em);
+  }
+}
+@keyframes moveup {
+  0%, 60%, 100% {
+    -webkit-transform: rotateX(50deg) rotateY(0deg) rotateZ(45deg) translateZ(0);
+            transform: rotateX(50deg) rotateY(0deg) rotateZ(45deg) translateZ(0);
+  }
+  25% {
+    -webkit-transform: rotateX(50deg) rotateY(0deg) rotateZ(45deg) translateZ(1em);
+            transform: rotateX(50deg) rotateY(0deg) rotateZ(45deg) translateZ(1em);
+  }
+}
+@-webkit-keyframes movedown {
+  0%, 60%, 100% {
+    -webkit-transform: rotateX(50deg) rotateY(0deg) rotateZ(45deg) translateZ(0);
+            transform: rotateX(50deg) rotateY(0deg) rotateZ(45deg) translateZ(0);
+  }
+  25% {
+    -webkit-transform: rotateX(50deg) rotateY(0deg) rotateZ(45deg) translateZ(-1em);
+            transform: rotateX(50deg) rotateY(0deg) rotateZ(45deg) translateZ(-1em);
+  }
+}
+@keyframes movedown {
+  0%, 60%, 100% {
+    -webkit-transform: rotateX(50deg) rotateY(0deg) rotateZ(45deg) translateZ(0);
+            transform: rotateX(50deg) rotateY(0deg) rotateZ(45deg) translateZ(0);
+  }
+  25% {
+    -webkit-transform: rotateX(50deg) rotateY(0deg) rotateZ(45deg) translateZ(-1em);
+            transform: rotateX(50deg) rotateY(0deg) rotateZ(45deg) translateZ(-1em);
+  }
+}
+/**
+ * Square layer styles
+ */
+.layer {
+  display: block;
+  position: absolute;
+  height: 3em;
+  width: 3em;
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotateX(50deg) rotateY(0deg) rotateZ(45deg);
+          transform: rotateX(50deg) rotateY(0deg) rotateZ(45deg);
+}
+.layer:nth-of-type(1) {
+  background: #534a47;
+  margin-top: 1.5em;
+  -webkit-animation: movedown 1.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0.9s infinite normal;
+          animation: movedown 1.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0.9s infinite normal;
+}
+.layer:nth-of-type(1):before {
+  content: '';
+  position: absolute;
+  width: 85%;
+  height: 85%;
+  background: #37332f;
+}
+.layer:nth-of-type(2) {
+  background: #5a96bc;
+  margin-top: 0.75em;
+}
+.layer:nth-of-type(3) {
+  background: rgba(255, 255, 255, 0.6);
+  -webkit-animation: moveup 1.8s cubic-bezier(0.39, 0.575, 0.565, 1) infinite normal;
+          animation: moveup 1.8s cubic-bezier(0.39, 0.575, 0.565, 1) infinite normal;
+}
+
+.container {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.uk-logo, .uk-logo:hover, .uk-logo:active, .uk-logo:visited {
+    color: #ffffff;
+}
+
+.uk-navbar-toggle, .uk-navbar-toggle:hover, .uk-navbar-toggle:active, .uk-navbar-toggle:visited {
+    color: #ffffff;
+    padding-top: 2px;
+}
+.uk-navbar-container {
+    background-color: #1e87f0 !important;
+    width: 100% !important;
+}
+.user > #name {
+    font-size: 22px;
+}
+.header {
+    box-sizing: border-box;
+    border-bottom: 1px #e5e5e5 solid;
+}
+.content-padder {
+    margin-left: 0px;
+}
+.content-background {
+    min-height: calc(100% - 80px);
+    background-color: #F0F0F0;
+}
+.statistics-text {
+    font-size: 25px;
+}
+.statistics-number {
+    font-size: 50px;
+}
+
+.tm-sidebar-left {
+    position: fixed;
+    z-index: 100;
+    top: 80px;
+    bottom: 0;
+    box-sizing: border-box;
+    width: 240px !important;
+    padding: 40px 40px 60px 40px;
+    border-right: 1px #e5e5e5 solid;
+    overflow-y: auto;
+	  overflow-x: hidden;
+}
+.tm-sidebar-left .uk-nav, .tm-sidebar-left .uk-nav-header {
+  font-size: .95rem;
+}
+.tm-sidebar-left .uk-nav-header {
+    padding: 8px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+.tm-sidebar-left .uk-nav li > a {
+    position: relative;
+}
+.tm-sidebar-left::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+.tm-sidebar-left::-webkit-scrollbar {
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+.tm-sidebar-left::-webkit-scrollbar-thumb {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #bdbdbd;
+}
+
+.tm-sidebar-right {
+    position: absolute;
+    top: 0;
+    left: calc(100% + 0px);
+    width: 200px
+}
+@media(max-width: 960px) {
+    .tm-sidebar-left {
+        opacity: 0;
+    }
+}
+
+@media (min-width: 960px) {
+    .content-padder {
+        margin-left: 240px;
+    }
+}
+@media (min-width: 1200px) {
+    .tm-sidebar-right {
+        left: calc(100% + 0px);
+    }
+    .tm-sidebar-left+.tm-main {
+        padding-left: 40px;
+        opacity: 0 !important;
+    }
+}
+@media (min-width: 1400px) {
+    .tm-sidebar-left {
+        width: 300px !important;
+        padding: 45px 45px 60px 45px
+    }
+    .tm-sidebar-right {
+        left: calc(100% + 60px)
+    }
+    .tm-sidebar-left+.tm-main {
+        padding-left: 40px
+    }
+    .content-padder {
+        margin-left: 300px;
+    }
+}

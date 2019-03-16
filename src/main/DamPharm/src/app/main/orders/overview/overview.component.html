@@ -1,0 +1,130 @@
+<app-dam-pharm-navbar></app-dam-pharm-navbar>
+<app-dam-pharm-sidebar></app-dam-pharm-sidebar>
+<div class="content-padder content-background">
+  <div class="uk-section-small">
+    <div class="uk-container uk-container-large">
+      <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-1@s uk-margin uk-margin-remove-top" uk-grid>
+        <div class="uk-width-1-1@m">
+          <div class="uk-card-body">
+            <div class="uk-grid-small uk-grid-divider uk-child-width-1-2@s uk-child-width-1-2@m" uk-grid>
+              <div class="uk-width-1-1@s uk-width-1-1@m">
+                <div class="uk-child-width-expand" uk-grid>
+                  <div>
+                    <h6 class="uk-margin-remove uk-text-uppercase">{{ 'table.order.id' | translate }}</h6>
+                    <h1 class="uk-card-title uk-margin-remove uk-text-uppercase">#{{ (order && order.id) ? order.id : null }}</h1>
+                  </div>
+                  <div class="uk-text-right">
+                    <button class="uk-button uk-button-danger" type="button" [disabled]="!(order)" uk-toggle="target: #modal-delete;">
+                      <span uk-icon="icon: trash;ratio:1.25;"></span>
+                    </button>
+                  </div>
+                  <div class="uk-width-1-1 uk-margin-remove">
+                    <hr class="uk-divider-icon">
+                  </div>
+
+                 
+
+                </div>
+
+                <div>
+                  <div id="viewer"></div>
+                </div>
+
+              </div>
+
+             
+             
+
+               <!--
+
+              <div>
+                <h6 class="uk-margin-remove uk-text-uppercase">{{ 'form.label.customer-name' | translate }}</h6>
+                <span class="uk-text-bold">{{ (order && order.customer) ? order.customer.full_name : null }}</span>
+              </div>
+
+              <div *ngFor="let productDetail of order?.productDetails">
+
+                <div>
+                  <h6 class="uk-margin-remove uk-text-uppercase">{{ 'table.product.name' | translate }}</h6>
+                  <span class="uk-text-bold">{{ (order ) ? productDetail.product.name : null }}</span>
+                </div>
+
+                <div>
+                  <h6 class="uk-margin-remove uk-text-uppercase">{{ 'form.label.amount' | translate }}</h6>
+                  <span class="uk-text-bold">{{ (order) ? productDetail.amount : null }}</span>
+                </div>
+
+
+
+                <div>
+                  <h6 class="uk-margin-remove uk-text-uppercase">{{ 'form.label.price' | translate }}</h6>
+                  <span class="uk-text-bold">{{ (order) ? currency.set(productDetail.product.selling_price).format(format()) :
+                    null }}</span>
+                </div>
+
+                <div>
+                  <h6 class="uk-margin-remove uk-text-uppercase">{{ 'form.label.total' | translate }}</h6>
+                  <span class="uk-text-bold">{{ (order ) ? currency.set(productDetail.product.selling_price * productDetail.amount).format(format())
+                    : null }}</span>
+                </div>
+
+
+                <div>
+                  <h6 class="uk-margin-remove uk-text-uppercase">{{ 'table.date' | translate }}</h6>
+                  <span class="uk-text-bold">{{ (order != null) ? order.created_at : null }}</span>
+                </div>
+
+                <div class="badges">
+                  <br>
+                  <p>
+                    <span class="firstLine">Discount</span>
+                    <br>
+                    <span class="secondLine">{{productDetail.discount}} % </span>
+                    <br>
+                    <span class="thirdLine">Total price
+                    </span>
+                    <span class="uk-badge">
+                      {{ (order) ? currency.set(( (100-productDetail.discount)*productDetail.product.selling_price * productDetail.amount )/100).format(format())
+                      : null }}
+                    </span>
+
+                    <br>
+                
+                  </p>
+                </div>
+
+              </div>
+-->
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="modal-delete" uk-modal>
+        <div class="uk-modal-dialog">
+          <div class="uk-modal-header">
+            <h2 class="uk-modal-title uk-text-center">{{ 'confirmation.delete.title' | translate }}</h2>
+          </div>
+          <div class="uk-modal-body uk-text-center">
+            <p>{{ 'confirmation.delete.message' | translate }}</p>
+          </div>
+          <div class="uk-modal-footer">
+            <div class="uk-container">
+              <div class="uk-grid-small uk-child-width-1-2" uk-grid>
+                <button class="uk-button uk-button-default uk-modal-close" type="button">{{ 'confirmation.delete.cancel' | translate }}</button>
+                <button class="uk-button uk-button-primary uk-modal-close" type="button" [disabled]="!(order)" (click)="onDelete()">{{ 'confirmation.delete.continue' | translate }}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+   
+
+
+    </div>
+  </div>
+</div>

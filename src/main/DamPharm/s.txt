@@ -1,0 +1,9 @@
+ "ng": "ng",
+    "start": "ng serve --proxy-config proxy.conf.json",
+    "build": "ng build -prod",
+    "postbuild": "npm run deploy",
+    "predeploy": "rimraf ../resources/static/ && mkdirp ../resources/static && mkdirp ../resources/static/assets && mkdirp ../resources/static/assets/i18n",
+    "deploy": "copyfiles -f dist/** ../resources/static && copyfiles -f src/assets/** ../resources/static/assets && copyfiles -f src/assets/i18n/** ../resources/static/assets/i18n",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"

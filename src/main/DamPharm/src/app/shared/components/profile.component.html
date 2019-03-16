@@ -1,0 +1,82 @@
+<div id="modal-edit-profile" uk-modal>
+  <div class="uk-modal-dialog">
+    <div class="uk-modal-header">
+      <h2 class="uk-modal-title uk-text-center">{{ 'text.edit.profile' | translate }}</h2>
+    </div>
+    <form (ngSubmit)="onSubmit();profileForm.reset()" #profileForm="ngForm">
+      <div class="uk-modal-body">
+        <div class="uk-grid-small uk-child-width-1-2@m" uk-grid>
+          <div>
+            <label for="name" class="uk-form-label">{{ 'form.label.name' | translate }}</label>
+            <input type="text" name="name" class="uk-input" placeholder="{{ 'form.placeholder.name' | translate }}" [required]="true"
+              [(ngModel)]="user.username" #name="ngModel">
+          </div>
+          <div>
+            <label for="email" class="uk-form-label">{{ 'form.label.email' | translate }}</label>
+            <input type="email" name="email" class="uk-input" placeholder="{{ 'form.placeholder.username' | translate }}" [required]="true"
+               [(ngModel)]="user.email" #email="ngModel">
+              <!-- <input type="email" name="email" class="uk-input" placeholder="{{ 'form.placeholder.username' | translate }}" [required]="true"
+              pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" [(ngModel)]="user.email" #email="ngModel"> -->
+          </div>
+          <div class="uk-margin">
+              <div class="uk-position-relative">
+                <span class="uk-form-icon ion-pricetags"></span>
+                <input type="text" name="phone" class="uk-input" placeholder="{{ 'form.placeholder.phone' | translate }}" [required]="true"
+                  [(ngModel)]="user.phone" #phone="ngModel">
+              </div>
+            </div>
+              <div class="uk-margin">
+              <div class="uk-position-relative">
+                <span class="uk-form-icon ion-pricetags"></span>
+                <input type="text" name="state" class="uk-input" placeholder="{{ 'form.placeholder.state' | translate }}" [required]="true"
+                  [(ngModel)]="user.state" #state="ngModel">
+              </div>
+            </div>
+            
+            <div class="uk-margin">
+              <div class="uk-position-relative">
+                <span class="uk-form-icon ion-pricetags"></span>
+                <input type="text" name="city" class="uk-input" placeholder="{{ 'form.placeholder.city' | translate }}" [required]="true"
+                  [(ngModel)]="user.city" #city="ngModel">
+              </div>
+            </div>
+
+            <div class="uk-margin">
+                <div class="uk-width-1-1 uk-position-relative">
+                  <textarea name="address" class="uk-textarea" rows="5" placeholder="{{ 'form.placeholder.address' | translate }}" [(ngModel)]="user.address"
+                    #address="ngModel"></textarea>
+                </div>
+              </div>
+
+            <div class="uk-margin">
+                <div class="uk-position-relative">
+                  <span class="uk-form-icon ion-pricetags"></span>
+                  <input type="text" name="website" class="uk-input" placeholder="{{ 'form.placeholder.website' | translate }}" [required]="true"
+                    [(ngModel)]="user.website" #city="ngModel">
+                </div>
+              </div>
+          <div>
+            <label for="old_password" class="uk-form-label">{{ 'form.label.old-password' | translate }}</label>
+            <input type="password" name="old_password" class="uk-input" placeholder="{{ 'form.placeholder.old-password' | translate }}" [(ngModel)]="user.oldpassword"
+              #old_password="ngModel">
+          </div>
+          <div>
+            <label for="password" class="uk-form-label">{{ 'form.label.new-password' | translate }}</label>
+            <input type="password" name="password" class="uk-input" placeholder="{{ 'form.placeholder.new-password' | translate }}" [(ngModel)]="user.newpassword" 
+              #password="ngModel">
+          </div>
+        </div>
+      </div>
+      <div class="uk-modal-footer">
+        <div class="uk-grid-small uk-child-width-1-1" uk-grid>
+          <div class="uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">{{ 'form.button.cancel' | translate }}</button>
+            <button class="uk-button uk-button-primary" type="submit" [disabled]="!profileForm.form.valid">
+              {{ 'form.button.save' | translate }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

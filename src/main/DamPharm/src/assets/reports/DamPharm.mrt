@@ -1,0 +1,1140 @@
+{
+  "ReportVersion": "2018.3.3",
+  "ReportGuid": "c330c95666273f505ec495b261aa3ed9",
+  "ReportName": "Report",
+  "ReportAlias": "Simple List",
+  "ReportFile": "salah_atwa3.mrt",
+  "ReportAuthor": "Stimulsoft",
+  "ReportDescription": "This sample demonstrates how to create a simple list report.",
+  "ReportCreated": "/Date(1085374740000-0700)/",
+  "ReportChanged": "/Date(1437533352000-0700)/",
+  "EngineVersion": "EngineV2",
+  "CalculationMode": "Interpretation",
+  "ReportUnit": "Centimeters",
+  "Styles": {
+    "0": {
+      "Ident": "StiStyle",
+      "Name": "Title1",
+      "HorAlignment": "Right",
+      "VertAlignment": "Center",
+      "Font": ";19;;",
+      "Border": ";193,152,89;;;;;;solid:Black",
+      "Brush": "solid:Transparent",
+      "TextBrush": "solid:193,152,89",
+      "AllowUseBorderSides": false
+    },
+    "1": {
+      "Ident": "StiStyle",
+      "Name": "Title2",
+      "VertAlignment": "Center",
+      "Font": ";9;;",
+      "Border": ";102,77,38;;;;;;solid:Black",
+      "Brush": "solid:Transparent",
+      "TextBrush": "solid:102,77,38",
+      "AllowUseBorderSides": false
+    },
+    "2": {
+      "Ident": "StiStyle",
+      "Name": "Header1",
+      "VertAlignment": "Center",
+      "Font": ";19;;",
+      "Border": ";193,152,89;;;;;;solid:Black",
+      "Brush": "solid:Transparent",
+      "TextBrush": "solid:193,152,89",
+      "AllowUseBorderSides": false
+    },
+    "3": {
+      "Ident": "StiStyle",
+      "Name": "Header2",
+      "HorAlignment": "Center",
+      "VertAlignment": "Center",
+      "Font": ";12;Bold;",
+      "Border": ";193,152,89;;;;;;solid:Black",
+      "Brush": "solid:Transparent",
+      "TextBrush": "solid:193,152,89",
+      "AllowUseBorderSides": false
+    },
+    "4": {
+      "Ident": "StiStyle",
+      "Name": "Header3",
+      "HorAlignment": "Center",
+      "VertAlignment": "Center",
+      "Font": ";9;Bold;",
+      "Border": "All;193,152,89;;;;;;solid:Black",
+      "Brush": "solid:242,234,221",
+      "TextBrush": "solid:193,152,89",
+      "AllowUseBorderSides": false
+    },
+    "5": {
+      "Ident": "StiStyle",
+      "Name": "Data1",
+      "VertAlignment": "Center",
+      "Font": ";9;;",
+      "Border": ";193,152,89;;;;;;solid:Black",
+      "Brush": "solid:Transparent",
+      "TextBrush": "solid:102,77,38",
+      "AllowUseBorderSides": false
+    },
+    "6": {
+      "Ident": "StiStyle",
+      "Name": "Data2",
+      "Font": ";9;;",
+      "Border": ";;;;;;;solid:Black",
+      "Brush": "solid:240,237,232",
+      "TextBrush": "solid:Black",
+      "AllowUseFont": false,
+      "AllowUseBorderFormatting": false,
+      "AllowUseBorderSides": false,
+      "AllowUseTextBrush": false,
+      "AllowUseTextOptions": false
+    },
+    "7": {
+      "Ident": "StiStyle",
+      "Name": "Data3",
+      "VertAlignment": "Center",
+      "Font": ";9;;",
+      "Border": ";193,152,89;;;;;;solid:Black",
+      "Brush": "solid:240,237,232",
+      "TextBrush": "solid:102,77,38",
+      "AllowUseBorderSides": false
+    },
+    "8": {
+      "Ident": "StiStyle",
+      "Name": "Footer1",
+      "VertAlignment": "Center",
+      "Font": ";9;;",
+      "Border": "Top;193,152,89;;;;;;solid:Black",
+      "Brush": "solid:Transparent",
+      "TextBrush": "solid:102,77,38",
+      "AllowUseBorderSides": false
+    },
+    "9": {
+      "Ident": "StiStyle",
+      "Name": "Footer2",
+      "HorAlignment": "Right",
+      "VertAlignment": "Center",
+      "Font": ";12;Bold;",
+      "Border": ";193,152,89;;;;;;solid:Black",
+      "Brush": "solid:Transparent",
+      "TextBrush": "solid:193,152,89",
+      "AllowUseBorderSides": false
+    }
+  },
+  "Dictionary": {
+    "DataSources": {
+      "0": {
+        "Ident": "StiDataTableSource",
+        "Name": "Customers",
+        "Alias": "Customers",
+        "Columns": {
+          "0": {
+            "Name": "Address",
+            "Index": -1,
+            "NameInSource": "Address",
+            "Alias": "Address",
+            "Type": "System.String"
+          },
+          "1": {
+            "Name": "City",
+            "Index": -1,
+            "NameInSource": "City",
+            "Alias": "City",
+            "Type": "System.String"
+          },
+          "2": {
+            "Name": "CompanyName",
+            "Index": -1,
+            "NameInSource": "CompanyName",
+            "Alias": "CompanyName",
+            "Type": "System.String"
+          },
+          "3": {
+            "Name": "ContactName",
+            "Index": -1,
+            "NameInSource": "ContactName",
+            "Alias": "ContactName",
+            "Type": "System.String"
+          },
+          "4": {
+            "Name": "ContactTitle",
+            "Index": -1,
+            "NameInSource": "ContactTitle",
+            "Alias": "ContactTitle",
+            "Type": "System.String"
+          },
+          "5": {
+            "Name": "Country",
+            "Index": -1,
+            "NameInSource": "Country",
+            "Alias": "Country",
+            "Type": "System.String"
+          },
+          "6": {
+            "Name": "CustomerID",
+            "Index": -1,
+            "NameInSource": "CustomerID",
+            "Alias": "CustomerID",
+            "Type": "System.String"
+          },
+          "7": {
+            "Name": "Fax",
+            "Index": -1,
+            "NameInSource": "Fax",
+            "Alias": "Fax",
+            "Type": "System.String"
+          },
+          "8": {
+            "Name": "Phone",
+            "Index": -1,
+            "NameInSource": "Phone",
+            "Alias": "Phone",
+            "Type": "System.String"
+          },
+          "9": {
+            "Name": "PostalCode",
+            "Index": -1,
+            "NameInSource": "PostalCode",
+            "Alias": "PostalCode",
+            "Type": "System.String"
+          },
+          "10": {
+            "Name": "Region",
+            "Index": -1,
+            "NameInSource": "Region",
+            "Alias": "Region",
+            "Type": "System.String"
+          }
+        },
+        "NameInSource": "Demo.Customers"
+      }
+    },
+    "Databases": {
+      "0": {
+        "Ident": "StiJsonDatabase",
+        "Name": "Demo",
+        "Alias": "Demo",
+        "PathData": "/reports/Demo.json"
+      },
+      "1": {
+        "Ident": "StiJsonDatabase",
+        "Name": "Demo",
+        "Alias": "Demo",
+        "PathData": "/reports/Demo.json"
+      },
+      "2": {
+        "Ident": "StiJsonDatabase",
+        "Name": "Demo",
+        "Alias": "Demo",
+        "PathData": "/reports/Demo.json"
+      }
+    }
+  },
+  "Pages": {
+    "0": {
+      "Ident": "StiPage",
+      "Name": "Page1",
+      "Guid": "366bfdc35bcf48f3aeb38f2b5f58db21",
+      "Interaction": {
+        "Ident": "StiInteraction"
+      },
+      "Border": ";;2;;;;;solid:Black",
+      "Brush": "solid:Transparent",
+      "Components": {
+        "0": {
+          "Ident": "StiPageFooterBand",
+          "Name": "PageFooterBand1",
+          "ClientRectangle": "0,27.3,19,0.4",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:Transparent",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "Text6",
+              "ClientRectangle": "6.8,0,12.2,0.4",
+              "ComponentStyle": "Footer1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{PageNofM}"
+              },
+              "HorAlignment": "Right",
+              "VertAlignment": "Center",
+              "Font": ";9;;",
+              "Border": ";193,152,89;;;;;;solid:Black",
+              "Brush": "solid:Transparent",
+              "TextBrush": "solid:102,77,38"
+            }
+          }
+        },
+        "1": {
+          "Ident": "StiText",
+          "Name": "Text26",
+          "ClientRectangle": "13.8,16,5.2,1",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Text": {
+            "Value": "<font face=\"Arial\" style=\"font-size: 22px;\" color=\"#7f7f7f\"><b style=\"\">الاعتماد والختم</b></font>"
+          },
+          "HorAlignment": "Center",
+          "VertAlignment": "Center",
+          "Font": ";9;Bold;",
+          "Border": "All;255,255,255;;;;;;solid:0,0,0",
+          "Brush": "solid:0,255,255,255",
+          "TextBrush": "empty",
+          "TextQuality": "Wysiwyg",
+          "AllowHtmlTags": true,
+          "Type": "Expression"
+        },
+        "2": {
+          "Ident": "StiReportTitleBand",
+          "Name": "ReportTitleBand2",
+          "Guid": "0e78e53250ce4a74baab882ac9d3f6e0",
+          "ClientRectangle": "0,0.4,19,9.6",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:Transparent",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "Text20",
+              "Guid": "426e9ac30a6840e7b47553f34723b8df",
+              "ClientRectangle": "13.6,0,5.4,0.8",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "<font color=\"#319b96\"><span style=\"font-size: 28px;\"><b>Sales Order</b></span></font>"
+              },
+              "HorAlignment": "Right",
+              "VertAlignment": "Center",
+              "Font": ";19;;",
+              "Border": "Bottom;255,255,255;;;;;;solid:0,0,0",
+              "Brush": "solid:Transparent",
+              "TextBrush": "empty",
+              "TextQuality": "Wysiwyg",
+              "AllowHtmlTags": true,
+              "Type": "Expression"
+            },
+            "1": {
+              "Ident": "StiText",
+              "Name": "Text23",
+              "Guid": "1bc08e78ae20472481fe55b04ade5b6a",
+              "ClientRectangle": "0,0,5.6,0.8",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "<font style=\"font-size: 28px;\" color=\"#319b96\"><b>Dam Pharm</b></font>"
+              },
+              "VertAlignment": "Center",
+              "Font": ";19;;",
+              "Border": "Bottom;255,255,255;;;;;;solid:0,0,0",
+              "Brush": "solid:Transparent",
+              "TextBrush": "empty",
+              "TextQuality": "Wysiwyg",
+              "AllowHtmlTags": true,
+              "Type": "Expression"
+            },
+            "2": {
+              "Ident": "StiText",
+              "Name": "Text5",
+              "ClientRectangle": "0.2,1.4,4,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "El Monoufia - El Bagour"
+              },
+              "Border": ";;;;;;;solid:0,0,0",
+              "Brush": "solid:Transparent",
+              "TextBrush": "solid:0,0,0",
+              "TextQuality": "Wysiwyg",
+              "AllowHtmlTags": true,
+              "Type": "Expression"
+            },
+            "3": {
+              "Ident": "StiText",
+              "Name": "Text9",
+              "Guid": "39599904ed3ad6740ba0757306da5212",
+              "ClientRectangle": "0.2,2,8.6,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "7&nbsp; Mostafa Abdel Aty St. Off El Morour Street"
+              },
+              "Border": ";;;;;;;solid:0,0,0",
+              "Brush": "solid:Transparent",
+              "TextBrush": "solid:0,0,0",
+              "TextQuality": "Wysiwyg",
+              "AllowHtmlTags": true,
+              "Type": "Expression"
+            },
+            "4": {
+              "Ident": "StiText",
+              "Name": "Text14",
+              "Guid": "b03e880c0ed30bea59e6bbf690e19d79",
+              "ClientRectangle": "0.2,2.6,8.6,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "Phone: [01062615954]"
+              },
+              "Border": ";;;;;;;solid:0,0,0",
+              "Brush": "solid:Transparent",
+              "TextBrush": "solid:0,0,0",
+              "TextQuality": "Wysiwyg",
+              "AllowHtmlTags": true,
+              "Type": "Expression"
+            },
+            "5": {
+              "Ident": "StiText",
+              "Name": "Text15",
+              "Guid": "359b09c903b12d05cb4959d6539e2f81",
+              "ClientRectangle": "0.2,3.2,8.6,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "Website: http:\\\\www.dampharm.com"
+              },
+              "Border": ";;;;;;;solid:0,0,0",
+              "Brush": "solid:Transparent",
+              "TextBrush": "solid:0,0,0",
+              "TextQuality": "Wysiwyg",
+              "AllowHtmlTags": true,
+              "Type": "Expression"
+            },
+            "6": {
+              "Ident": "StiText",
+              "Name": "Text16",
+              "ClientRectangle": "0,4.6,8.6,1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "<font style=\"font-size: 22px;\" color=\"#f2f2f2\" face=\"Agency FB\">Bill To</font>"
+              },
+              "VertAlignment": "Center",
+              "Border": ";49,155,150;;;;;;solid:0,0,0",
+              "Brush": "solid:49,155,150",
+              "TextBrush": "solid:49,155,150",
+              "TextQuality": "Wysiwyg",
+              "AllowHtmlTags": true,
+              "Type": "Expression"
+            },
+            "7": {
+              "Ident": "StiPanel",
+              "Name": "Panel1",
+              "CanGrow": true,
+              "ClientRectangle": "0.2,5.6,8.4,3.8",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Border": ";49,155,150;;;;;;solid:0,0,0",
+              "Brush": "solid:0,255,255,255",
+              "Components": {
+                "0": {
+                  "Ident": "StiTable",
+                  "Name": "Table1",
+                  "ClientRectangle": "0,0.4,8.4,3.2",
+                  "Interaction": {
+                    "Ident": "StiBandInteraction"
+                  },
+                  "Border": ";;;;;;;solid:Black",
+                  "Brush": "solid:Transparent",
+                  "Components": {
+                    "0": {
+                      "Ident": "StiTableCell",
+                      "Name": "Table1_Cell1",
+                      "ClientRectangle": "0,0,2.8,0.8",
+                      "Restrictions": "AllowMove, AllowSelect, AllowChange",
+                      "Enabled": false,
+                      "Interaction": {
+                        "Ident": "StiInteraction"
+                      },
+                      "Border": "All;105,105,105;;;;;;solid:105,105,105",
+                      "Brush": "solid:Transparent",
+                      "TextBrush": "solid:Black",
+                      "ParentJoin": 1,
+                      "ID": 0
+                    },
+                    "1": {
+                      "Ident": "StiTableCell",
+                      "Name": "Table1_Cell2",
+                      "ClientRectangle": "0.07,0,4.96,0.81",
+                      "Restrictions": "AllowMove, AllowSelect, AllowChange",
+                      "Interaction": {
+                        "Ident": "StiInteraction"
+                      },
+                      "Editable": true,
+                      "Text": {
+                        "Value": "[Name]"
+                      },
+                      "VertAlignment": "Center",
+                      "Font": "Agency FB;12;;",
+                      "Border": "All;105,105,105;;None;;;;solid:105,105,105",
+                      "Brush": "solid:Transparent",
+                      "TextBrush": "solid:Black",
+                      "JoinCells": {
+                        "0": "0",
+                        "1": "1"
+                      },
+                      "ParentJoin": 1,
+                      "Join": true,
+                      "ID": 1,
+                      "JoinWidth": 2,
+                      "JoinHeight": 1
+                    },
+                    "2": {
+                      "Ident": "StiTableCell",
+                      "Name": "Table1_Cell3",
+                      "ClientRectangle": "5.01,0,3.39,0.81",
+                      "Restrictions": "AllowMove, AllowSelect, AllowChange",
+                      "Interaction": {
+                        "Ident": "StiInteraction"
+                      },
+                      "Border": "All;105,105,105;;;;;;solid:105,105,105",
+                      "Brush": "solid:100,49,155,150",
+                      "TextBrush": "solid:Black",
+                      "ID": 2
+                    },
+                    "3": {
+                      "Ident": "StiTableCell",
+                      "Name": "Table1_Cell4",
+                      "ClientRectangle": "0,0.81,2.8,0.8",
+                      "Restrictions": "AllowMove, AllowSelect, AllowChange",
+                      "Enabled": false,
+                      "Interaction": {
+                        "Ident": "StiInteraction"
+                      },
+                      "Border": "All;105,105,105;;;;;;solid:105,105,105",
+                      "Brush": "solid:Transparent",
+                      "TextBrush": "solid:Black",
+                      "ParentJoin": 6,
+                      "ID": 5
+                    },
+                    "4": {
+                      "Ident": "StiTableCell",
+                      "Name": "Table1_Cell5",
+                      "ClientRectangle": "0.07,0.81,4.96,0.81",
+                      "Restrictions": "AllowMove, AllowSelect, AllowChange",
+                      "Interaction": {
+                        "Ident": "StiInteraction"
+                      },
+                      "Editable": true,
+                      "Text": {
+                        "Value": "[Street Address]"
+                      },
+                      "VertAlignment": "Center",
+                      "Font": "Agency FB;12;;",
+                      "Border": "All;105,105,105;;None;;;;solid:105,105,105",
+                      "Brush": "solid:Transparent",
+                      "TextBrush": "solid:Black",
+                      "JoinCells": {
+                        "0": "5",
+                        "1": "6"
+                      },
+                      "ParentJoin": 6,
+                      "Join": true,
+                      "ID": 6,
+                      "JoinWidth": 2,
+                      "JoinHeight": 1
+                    },
+                    "5": {
+                      "Ident": "StiTableCell",
+                      "Name": "Table1_Cell6",
+                      "ClientRectangle": "5.01,0.81,3.39,0.81",
+                      "Restrictions": "AllowMove, AllowSelect, AllowChange",
+                      "Interaction": {
+                        "Ident": "StiInteraction"
+                      },
+                      "Border": "All;105,105,105;;;;;;solid:105,105,105",
+                      "Brush": "solid:100,49,155,150",
+                      "TextBrush": "solid:Black",
+                      "ID": 7
+                    },
+                    "6": {
+                      "Ident": "StiTableCell",
+                      "Name": "Table1_Cell7",
+                      "ClientRectangle": "0,1.62,2.8,0.8",
+                      "Restrictions": "AllowMove, AllowSelect, AllowChange",
+                      "Enabled": false,
+                      "Interaction": {
+                        "Ident": "StiInteraction"
+                      },
+                      "Border": "All;105,105,105;;;;;;solid:105,105,105",
+                      "Brush": "solid:Transparent",
+                      "TextBrush": "solid:Black",
+                      "ParentJoin": 11,
+                      "ID": 10
+                    },
+                    "7": {
+                      "Ident": "StiTableCell",
+                      "Name": "Table1_Cell8",
+                      "ClientRectangle": "0.07,1.62,4.96,0.78",
+                      "Restrictions": "AllowMove, AllowSelect, AllowChange",
+                      "Interaction": {
+                        "Ident": "StiInteraction"
+                      },
+                      "Editable": true,
+                      "Text": {
+                        "Value": "[Governorate]"
+                      },
+                      "VertAlignment": "Center",
+                      "Font": "Agency FB;12;;",
+                      "Border": "All;105,105,105;;None;;;;solid:105,105,105",
+                      "Brush": "solid:Transparent",
+                      "TextBrush": "solid:Black",
+                      "JoinCells": {
+                        "0": "10",
+                        "1": "11"
+                      },
+                      "ParentJoin": 11,
+                      "Join": true,
+                      "ID": 11,
+                      "JoinWidth": 2,
+                      "JoinHeight": 1
+                    },
+                    "8": {
+                      "Ident": "StiTableCell",
+                      "Name": "Table1_Cell9",
+                      "ClientRectangle": "5.01,1.62,3.39,0.78",
+                      "Restrictions": "AllowMove, AllowSelect, AllowChange",
+                      "Interaction": {
+                        "Ident": "StiInteraction"
+                      },
+                      "Border": "All;105,105,105;;;;;;solid:105,105,105",
+                      "Brush": "solid:100,49,155,150",
+                      "TextBrush": "solid:Black",
+                      "ID": 12
+                    },
+                    "9": {
+                      "Ident": "StiTableCell",
+                      "Name": "Table1_Cell10",
+                      "ClientRectangle": "0,2.4,2.8,0.8",
+                      "Restrictions": "AllowMove, AllowSelect, AllowChange",
+                      "Enabled": false,
+                      "Interaction": {
+                        "Ident": "StiInteraction"
+                      },
+                      "Border": "All;105,105,105;;;;;;solid:105,105,105",
+                      "Brush": "solid:Transparent",
+                      "TextBrush": "solid:Black",
+                      "ParentJoin": 26,
+                      "ID": 25
+                    },
+                    "10": {
+                      "Ident": "StiTableCell",
+                      "Name": "Table1_Cell11",
+                      "ClientRectangle": "0.07,2.4,4.96,0.8",
+                      "Restrictions": "AllowMove, AllowSelect, AllowChange",
+                      "Interaction": {
+                        "Ident": "StiInteraction"
+                      },
+                      "Text": {
+                        "Value": "[Phone]"
+                      },
+                      "VertAlignment": "Center",
+                      "Font": "Agency FB;12;;",
+                      "Border": "All;105,105,105;;None;;;;solid:105,105,105",
+                      "Brush": "solid:Transparent",
+                      "TextBrush": "solid:Black",
+                      "JoinCells": {
+                        "0": "25",
+                        "1": "26"
+                      },
+                      "ParentJoin": 26,
+                      "Join": true,
+                      "ID": 26,
+                      "JoinWidth": 2,
+                      "JoinHeight": 1
+                    },
+                    "11": {
+                      "Ident": "StiTableCell",
+                      "Name": "Table1_Cell12",
+                      "ClientRectangle": "5.01,2.4,3.39,0.8",
+                      "Restrictions": "AllowMove, AllowSelect, AllowChange",
+                      "Interaction": {
+                        "Ident": "StiInteraction"
+                      },
+                      "Border": "All;105,105,105;;;;;;solid:105,105,105",
+                      "Brush": "solid:100,49,155,150",
+                      "TextBrush": "solid:Black",
+                      "ID": 27
+                    }
+                  },
+                  "RowCount": 4,
+                  "ColumnCount": 3,
+                  "NumberID": 28
+                }
+              }
+            },
+            "8": {
+              "Ident": "StiImage",
+              "Name": "Image1",
+              "Guid": "a6d72f6d49e58cc3d0875dbe8a080541",
+              "ClientRectangle": "8,0,2.6,2",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "HorAlignment": "Right",
+              "VertAlignment": "Center",
+              "Border": "Bottom;255,255,255;;;;;;solid:0,0,0",
+              "Brush": "solid:Transparent",
+              "ImageBytes": "data:image/jpeg;base64,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"
+            },
+            "9": {
+              "Ident": "StiText",
+              "Name": "Text17",
+              "ClientRectangle": "1.2,3.6,2.4,0.8",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "<font face=\"Arial\" color=\"#7f7f7f\" style=\"font-size: 11px;\"><i style=\"\"><b style=\"\">C.R. 85126</b></i></font>"
+              },
+              "HorAlignment": "Right",
+              "VertAlignment": "Center",
+              "Font": ";19;;",
+              "Border": "Bottom;255,255,255;;;;;;solid:0,0,0",
+              "Brush": "solid:Transparent",
+              "TextBrush": "empty",
+              "TextQuality": "Wysiwyg",
+              "AllowHtmlTags": true,
+              "Type": "Expression"
+            },
+            "10": {
+              "Ident": "StiText",
+              "Name": "Text18",
+              "Guid": "9be4160a39bbfe31efd15f3902773717",
+              "ClientRectangle": "14.6,3.6,2.2,0.8",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "<font color=\"#7f7f7f\" face=\"Arial\"><span style=\"font-size: 11px;\"><b><i>س . ت:85126</i></b></span></font>"
+              },
+              "VertAlignment": "Center",
+              "Font": ";19;;",
+              "Border": "Bottom;255,255,255;;;;;;solid:0,0,0",
+              "Brush": "solid:Transparent",
+              "TextBrush": "empty",
+              "TextQuality": "Wysiwyg",
+              "AllowHtmlTags": true,
+              "Type": "Expression"
+            },
+            "11": {
+              "Ident": "StiHorizontalLinePrimitive",
+              "Name": "HorizontalLinePrimitive1",
+              "ClientRectangle": "3.8,4,10.6,0.0254",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "StartCap": ";;;",
+              "EndCap": ";;;"
+            }
+          }
+        },
+        "3": {
+          "Ident": "StiHeaderBand",
+          "Name": "HeaderBand1",
+          "ClientRectangle": "0,10.8,19,0.6",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:Transparent",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "Text11",
+              "ClientRectangle": "4.4,0,2,0.6",
+              "ComponentStyle": "Header3",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "<font color=\"#ffffff\">Qty</font>"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9;Bold;",
+              "Border": "All;255,255,255;;;;;;solid:0,0,0",
+              "Brush": "solid:49,155,150",
+              "TextBrush": "empty",
+              "TextQuality": "Wysiwyg",
+              "AllowHtmlTags": true,
+              "Type": "Expression"
+            },
+            "1": {
+              "Ident": "StiText",
+              "Name": "Text12",
+              "ShiftMode": "DecreasingSize, OnlyInWidthOfComponent",
+              "ClientRectangle": "6.4,0,3,0.6",
+              "ComponentStyle": "Header3",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "<font color=\"#ffffff\">Unit Price</font>"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9;Bold;",
+              "Border": "All;255,255,255;;;;;;solid:0,0,0",
+              "Brush": "solid:49,155,150",
+              "TextBrush": "empty",
+              "TextQuality": "Wysiwyg",
+              "AllowHtmlTags": true,
+              "Type": "Expression"
+            },
+            "2": {
+              "Ident": "StiText",
+              "Name": "Text13",
+              "ClientRectangle": "9.4,0,2.6,0.6",
+              "ComponentStyle": "Header3",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "<font color=\"#ffffff\">Amount</font>"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9;Bold;",
+              "Border": "All;255,255,255;;;;;;solid:0,0,0",
+              "Brush": "solid:49,155,150",
+              "TextBrush": "empty",
+              "TextQuality": "Wysiwyg",
+              "AllowHtmlTags": true,
+              "Type": "Expression"
+            },
+            "3": {
+              "Ident": "StiText",
+              "Name": "Text10",
+              "ClientRectangle": "1,0,3.4,0.6",
+              "ComponentStyle": "Header3",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "<font color=\"#ffffff\">DESCRIPTION</font>"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9;Bold;",
+              "Border": "All;255,255,255;;;;;;solid:0,0,0",
+              "Brush": "solid:49,155,150",
+              "TextBrush": "empty",
+              "TextQuality": "Wysiwyg",
+              "AllowHtmlTags": true,
+              "Type": "Expression"
+            },
+            "4": {
+              "Ident": "StiText",
+              "Name": "Text19",
+              "Guid": "2dff7e58e3a4e6e8bcb86e4208e5bf09",
+              "ClientRectangle": "0,0,1,0.6",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "<font color=\"#ffffff\">S.NO</font>"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9;Bold;",
+              "Border": "All;255,255,255;;;;;;solid:0,0,0",
+              "Brush": "solid:49,155,150",
+              "TextBrush": "empty",
+              "TextQuality": "Wysiwyg",
+              "AllowHtmlTags": true,
+              "Type": "Expression"
+            },
+            "5": {
+              "Ident": "StiText",
+              "Name": "Text21",
+              "Guid": "81bb542c33cfd69e5889b4db40f3940b",
+              "ClientRectangle": "12,0,3.6,0.6",
+              "ComponentStyle": "Header3",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "<font color=\"#ffffff\">Discount</font>"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9;Bold;",
+              "Border": "All;255,255,255;;;;;;solid:0,0,0",
+              "Brush": "solid:49,155,150",
+              "TextBrush": "empty",
+              "TextQuality": "Wysiwyg",
+              "AllowHtmlTags": true,
+              "Type": "Expression"
+            },
+            "6": {
+              "Ident": "StiText",
+              "Name": "Text22",
+              "Guid": "5ff1013d0f12e10263b1b59ad2fb3648",
+              "ClientRectangle": "15.6,0,3.4,0.6",
+              "ComponentStyle": "Header3",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "<font color=\"#ffffff\">Amount</font>"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9;Bold;",
+              "Border": "All;255,255,255;;;;;;solid:0,0,0",
+              "Brush": "solid:49,155,150",
+              "TextBrush": "empty",
+              "TextQuality": "Wysiwyg",
+              "AllowHtmlTags": true,
+              "Type": "Expression"
+            }
+          },
+          "PrintIfEmpty": true
+        },
+        "4": {
+          "Ident": "StiDataBand",
+          "Name": "DataBand1",
+          "ClientRectangle": "0,12.2,19,1.4",
+          "Interaction": {
+            "Ident": "StiBandInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:Transparent",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "Text4",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "6.4,0,3,0.6",
+              "ComponentStyle": "Data1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Customers.Phone}"
+              },
+              "VertAlignment": "Center",
+              "Font": ";9;;",
+              "Border": "Left;193,152,89;;;;;;solid:Black",
+              "Brush": "solid:Transparent",
+              "TextBrush": "solid:102,77,38",
+              "TextOptions": {
+                "WordWrap": true
+              }
+            },
+            "1": {
+              "Ident": "StiText",
+              "Name": "Text3",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "9.4,0,2.6,0.6",
+              "ComponentStyle": "Data1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Customers.ContactTitle}"
+              },
+              "VertAlignment": "Center",
+              "Font": ";9;;",
+              "Border": "Left, Right;193,152,89;;;;;;solid:Black",
+              "Brush": "solid:Transparent",
+              "TextBrush": "solid:102,77,38",
+              "TextOptions": {
+                "WordWrap": true
+              }
+            },
+            "2": {
+              "Ident": "StiText",
+              "Name": "Text1",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "1,0,3.4,0.6",
+              "ComponentStyle": "Data1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Customers.CompanyName}"
+              },
+              "VertAlignment": "Center",
+              "Font": ";9;;",
+              "Border": "Left;193,152,89;;;;;;solid:Black",
+              "Brush": "solid:Transparent",
+              "TextBrush": "solid:102,77,38",
+              "TextOptions": {
+                "WordWrap": true
+              },
+              "Type": "Expression"
+            },
+            "3": {
+              "Ident": "StiText",
+              "Name": "Text2",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "4.4,0,2,0.6",
+              "ComponentStyle": "Data1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Customers.Address}"
+              },
+              "VertAlignment": "Center",
+              "Font": ";9;;",
+              "Border": "Left;193,152,89;;;;;;solid:Black",
+              "Brush": "solid:Transparent",
+              "TextBrush": "solid:102,77,38",
+              "TextOptions": {
+                "WordWrap": true
+              }
+            },
+            "4": {
+              "Ident": "StiText",
+              "Name": "Text7",
+              "Guid": "5b832677f467498487ebd4777d80e7b0",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "0,0,1,0.6",
+              "ComponentStyle": "Data1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Line}"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": ";9;;",
+              "Border": "Left;193,152,89;;;;;;solid:Black",
+              "Brush": "solid:Transparent",
+              "TextBrush": "solid:102,77,38",
+              "Type": "Expression"
+            },
+            "5": {
+              "Ident": "StiText",
+              "Name": "Text24",
+              "Guid": "532256dd56614d0a526e43ef4dec81ad",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "12,0,3.6,0.6",
+              "ComponentStyle": "Data1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Customers.ContactTitle}"
+              },
+              "VertAlignment": "Center",
+              "Font": ";9;;",
+              "Border": "Left, Right;193,152,89;;;;;;solid:Black",
+              "Brush": "solid:Transparent",
+              "TextBrush": "solid:102,77,38",
+              "TextOptions": {
+                "WordWrap": true
+              }
+            },
+            "6": {
+              "Ident": "StiText",
+              "Name": "Text25",
+              "Guid": "172b945f8e40f88dfcb150d45664e78c",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "15.6,0,3.4,0.6",
+              "ComponentStyle": "Data1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{Customers.ContactTitle}"
+              },
+              "VertAlignment": "Center",
+              "Font": ";9;;",
+              "Border": "Left, Right;193,152,89;;;;;;solid:Black",
+              "Brush": "solid:Transparent",
+              "TextBrush": "solid:102,77,38",
+              "TextOptions": {
+                "WordWrap": true
+              }
+            }
+          },
+          "DataSourceName": "Customers",
+          "EvenStyle": "Data2"
+        },
+        "5": {
+          "Ident": "StiFooterBand",
+          "Name": "FooterBand1",
+          "ClientRectangle": "0,14.4,19,0.2",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:Transparent",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "Text8",
+              "Guid": "dcc6258185da48c0bee4c3c0395fb37d",
+              "CanGrow": true,
+              "GrowToHeight": true,
+              "ClientRectangle": "0,0,19,0.2",
+              "ComponentStyle": "Data1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "VertAlignment": "Center",
+              "Font": ";9;;",
+              "Border": "Top;193,152,89;;;;;;solid:Black",
+              "Brush": "solid:Transparent",
+              "TextBrush": "solid:102,77,38",
+              "TextOptions": {
+                "WordWrap": true
+              }
+            }
+          },
+          "PrintOnAllPages": true
+        },
+        "6": {
+          "Ident": "StiHorizontalLinePrimitive",
+          "Name": "HorizontalLinePrimitive2",
+          "ClientRectangle": "14.4,17.2,4.2,0.0254",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Style": "Dot",
+          "StartCap": ";;;",
+          "EndCap": ";;;"
+        }
+      },
+      "PageWidth": 21,
+      "PageHeight": 29.7,
+      "Watermark": {
+        "Font": ";;Bold;",
+        "TextBrush": "solid:50,0,0,0"
+      },
+      "Margins": {
+        "Left": 1,
+        "Right": 1,
+        "Top": 1,
+        "Bottom": 1
+      }
+    }
+  }
+}

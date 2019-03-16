@@ -1,0 +1,134 @@
+<app-dam-pharm-navbar></app-dam-pharm-navbar>
+<div class="content-background">
+  <div class="uk-section-small">
+    <div class="uk-container uk-container-large">
+      <div uk-grid class="uk-child-width-1-1@s uk-child-width-2-3@l">
+        <div class="uk-width-1-1@s uk-width-1-4@l uk-width-1-3@xl"></div>
+        <div class="uk-width-1-1@s uk-width-1-2@l uk-width-1-3@xl">
+          <div class="uk-card uk-card-default">
+            <div class="uk-card-header">
+              <div class="uk-child-width-1-2" uk-grid>
+                <div class="uk-flex uk-flex-middle">
+                  {{ 'module.title.register' | translate }}
+                </div>
+                <div class="uk-text-right">
+                  <button class="uk-button uk-button-link" type="button">
+                    <span uk-icon="icon: settings; ratio: 1.3"></span>
+                  </button>
+                  <div uk-dropdown="mode: click;pos: bottom-right">
+                    <ul class="uk-nav uk-dropdown-nav">
+                      <li *ngFor="let lang of translate.getLangs()" class="{{ (translate.currentLang === lang) ? 'uk-active' : null }}" [style.display]="(lang === '_i18n') ? 'none' : null">
+                        <a (click)="onChangeLanguage(lang)">
+                          {{ lang | translate }}
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="uk-card-body">
+              <h2 class="uk-text-center uk-text-uppercase uk-margin-small-bottom">{{app.name}}</h2>
+              <h5 class="uk-text-center uk-text-uppercase uk-margin-small-top">{{ 'intro' | translate }}</h5>
+              <br />
+              <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+                <fieldset class="uk-fieldset">
+                  <div class="uk-margin">
+                    <div class="uk-position-relative">
+                      <span class="uk-form-icon ion-android-person"></span>
+                      <input class="uk-input" name="name" type="text" placeholder="{{ 'form.placeholder.fullname' | translate }}" [(ngModel)]="credentials.username"
+                        #name="ngModel">
+                    </div>
+                  </div>
+                  <div class="uk-margin">
+                    <div class="uk-position-relative">
+                      <span class="uk-form-icon ion-at"></span>
+                      <input class="uk-input" name="email" type="email" placeholder="{{ 'form.placeholder.email' | translate }}" [(ngModel)]="credentials.email"
+                        #email="ngModel">
+                    </div>
+                  </div>
+
+                <div class="uk-margin">
+                  <div class="uk-position-relative">
+                    <span class="uk-form-icon ion-pricetags"></span>
+                    <input type="text" name="phone" class="uk-input" placeholder="{{ 'form.placeholder.phone' | translate }}" [required]="true"
+                      [(ngModel)]="credentials.phone" #phone="ngModel">
+                  </div>
+                </div>
+                  <div class="uk-margin">
+                  <div class="uk-position-relative">
+                    <span class="uk-form-icon ion-pricetags"></span>
+                    <input type="text" name="state" class="uk-input" placeholder="{{ 'form.placeholder.state' | translate }}" [required]="true"
+                      [(ngModel)]="credentials.state" #state="ngModel">
+                  </div>
+                </div>
+                <div class="uk-margin">
+                  <div class="uk-position-relative">
+                    <span class="uk-form-icon ion-pricetags"></span>
+                    <input type="text" name="city" class="uk-input" placeholder="{{ 'form.placeholder.city' | translate }}" [required]="true"
+                      [(ngModel)]="credentials.city" #city="ngModel">
+                  </div>
+                </div>
+
+                <div class="uk-margin">
+                    <div class="uk-position-relative">
+                      <span class="uk-form-icon ion-pricetags"></span>
+                      <input type="text" name="website" class="uk-input" placeholder="{{ 'form.placeholder.website' | translate }}" [required]="true"
+                        [(ngModel)]="credentials.website" #city="ngModel">
+                    </div>
+                  </div>
+
+                  <div class="uk-margin">
+                    <div class="uk-position-relative">
+                      <span class="uk-form-icon ion-locked"></span>
+                      <input class="uk-input" name="password" type="password" placeholder="{{ 'form.placeholder.password' | translate }}" [(ngModel)]="credentials.password"
+                        #password="ngModel">
+                    </div>
+                  </div>
+                  <div class="uk-margin">
+                    <div class="uk-position-relative">
+                      <span class="uk-form-icon ion-briefcase"></span>
+                      <input class="uk-input" name="company_name" type="text" placeholder="{{ 'form.placeholder.company-name' | translate }}" [(ngModel)]="credentials.company.name"
+                        #company_name="ngModel">
+                    </div>
+                  </div>
+                  <div class="uk-margin">
+                    <div class="uk-position-relative">
+                      <span class="uk-form-icon ion-pricetags"></span>
+                      <input ngui-auto-complete readonly="true" class="uk-input" [(ngModel)]="credentials.company.type" [source]="companyTypes" style="background-color:transparent !important;padding-left:40px;"
+                        list-formatter="name" display-property-name="name" placeholder="{{ 'form.placeholder.company-type' | translate }}"
+                        name="company_type" #company_type="ngModel" />
+                    </div>
+                  </div>
+                  
+                <div class="uk-margin">
+                  <div class="uk-width-1-1 uk-position-relative">
+                    <textarea name="address" class="uk-textarea" rows="5" placeholder="{{ 'form.placeholder.address' | translate }}" [(ngModel)]="credentials.address"
+                      #address="ngModel"></textarea>
+                  </div>
+                </div>
+
+                  <div class="uk-margin">
+                    <button type="submit" class="uk-button uk-button-primary">
+                      <span class="ion-forward"></span>&nbsp; {{ 'module.title.register' | translate }}
+                    </button>
+                  </div>
+                  <hr />
+                  <div style="text-align:center;">
+                    <p>
+                      {{ 'text.has-account' | translate }}
+                    </p>
+                    <a routerLink="/login" class="uk-button uk-button-default">
+                      <span class="ion-log-in"></span>&nbsp; {{ 'module.title.login' | translate }}
+                    </a>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="uk-width-1-1@s uk-width-1-4@l uk-width-1-3@xl"></div>
+      </div>
+    </div>
+  </div>
+</div>
