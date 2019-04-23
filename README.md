@@ -1,6 +1,12 @@
 # DamPharm
 Store Management System build with Angularjs 4 and Spring boot  
 
+Why
+
+Mainly designed for small-to-medium companies, DamPharm is a modern and very intuitive inventory management application built with some of the trendiest web technologies. Right off the bat, it's worth pointing out that this is by no means a professional software for inventory management. Be that as it may, it can still prove itself fairly useful as it boasts an interesting set of primary features.
+
+I believe there are many people who needs a simple tool to manage everything from product inventories to orders and of course it's free to use.
+
 # Build application
  - npm run build
  
